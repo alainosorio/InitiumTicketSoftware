@@ -1,0 +1,22 @@
+version: '3.4'
+
+services:
+  initiumticketsoftwaremvc:
+    image: ${DOCKER_REGISTRY-}initiumticketsoftwaremvc
+    build:
+      context: .
+      dockerfile: InitiumTicketSoftwareMVC\Dockerfile
+
+  initiumticketsoftwareworker:
+    image: ${DOCKER_REGISTRY-}initiumticketsoftwareworker
+    build:
+      context: .
+      dockerfile: InitiumTicketSoftwareWorker\Dockerfile
+
+
+  intiumticketapi:
+    image: ${DOCKER_REGISTRY-}intiumticketapi
+    build:
+      context: .
+      dockerfile: IntiumTicketAPI\Dockerfile
+
